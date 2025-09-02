@@ -1,0 +1,203 @@
+<!-- Version 2 Carousel - Full Image Cards -->
+<div class="carousel-v2">
+    <ul class="carousel-v2__list">
+        <li class="carousel-v2__item" data-pos="-2">
+            <img src="images/1.jpg" alt="Image 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="image-placeholder-v2" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                </svg>
+                <span>Image 1</span>
+            </div>
+        </li>
+        <li class="carousel-v2__item" data-pos="-1">
+            <img src="images/2.jpg" alt="Image 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="image-placeholder-v2" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                </svg>
+                <span>Image 2</span>
+            </div>
+        </li>
+        <li class="carousel-v2__item" data-pos="0">
+            <img src="images/3.jpg" alt="Image 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="image-placeholder-v2" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                </svg>
+                <span>Image 3</span>
+            </div>
+        </li>
+        <li class="carousel-v2__item" data-pos="1">
+            <img src="images/4.jpg" alt="Image 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="image-placeholder-v2" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                </svg>
+                <span>Image 4</span>
+            </div>
+        </li>
+        <li class="carousel-v2__item" data-pos="2">
+            <img src="images/5.jpg" alt="Image 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="image-placeholder-v2" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                </svg>
+                <span>Image 5</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<style>
+/* Version 2 Carousel Styles - Full Image Cards */
+.carousel-v2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.carousel-v2__list {
+    display: flex;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    perspective: 300px;
+}
+
+.carousel-v2__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 250px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+    position: absolute;
+    transition: all .3s ease-in;
+    cursor: pointer;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    /* backdrop-filter: blur(10px); - REMOVED to prevent liquid glass interference */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carousel-v2__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Placeholder for Version 2 */
+.image-placeholder-v2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.image-placeholder-v2 svg {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+    opacity: 0.6;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-v2__item[data-pos="0"] {
+    z-index: 5;
+}
+
+.carousel-v2__item[data-pos="-1"],
+.carousel-v2__item[data-pos="1"] {
+    opacity: 0.7;
+    filter: blur(1px) grayscale(10%);
+}
+
+.carousel-v2__item[data-pos="-1"] {
+    transform: translateX(-40%) scale(.9);
+    z-index: 4;
+}
+
+.carousel-v2__item[data-pos="1"] {
+    transform: translateX(40%) scale(.9);
+    z-index: 4;
+}
+
+.carousel-v2__item[data-pos="-2"],
+.carousel-v2__item[data-pos="2"] {
+    opacity: 0.4;
+    filter: blur(3px) grayscale(20%);
+}
+
+.carousel-v2__item[data-pos="-2"] {
+    transform: translateX(-70%) scale(.8);
+    z-index: 3;
+}
+
+.carousel-v2__item[data-pos="2"] {
+    transform: translateX(70%) scale(.8);
+    z-index: 3;
+}
+</style>
+
+<script>
+// Version 2 Carousel JavaScript
+const carouselV2List = document.querySelector('.carousel-v2__list');
+const carouselV2Items = document.querySelectorAll('.carousel-v2__item');
+const elemsV2 = Array.from(carouselV2Items);
+
+carouselV2List.addEventListener('click', function (event) {
+    // Prevent interference with navigation buttons
+    if (event.target.closest('.nav-buttons') || 
+        event.target.closest('.glass-button')) {
+        return;
+    }
+    
+    var newActive = event.target.closest('.carousel-v2__item');
+
+    if (!newActive || newActive.classList.contains('carousel-v2__item_active')) {
+        return;
+    };
+    
+    updateV2(newActive);
+});
+
+const updateV2 = function(newActive) {
+    const newActivePos = newActive.dataset.pos;
+
+    const current = elemsV2.find((elem) => elem.dataset.pos == 0);
+    const prev = elemsV2.find((elem) => elem.dataset.pos == -1);
+    const next = elemsV2.find((elem) => elem.dataset.pos == 1);
+    const first = elemsV2.find((elem) => elem.dataset.pos == -2);
+    const last = elemsV2.find((elem) => elem.dataset.pos == 2);
+    
+    current.classList.remove('carousel-v2__item_active');
+    
+    [current, prev, next, first, last].forEach(item => {
+        var itemPos = item.dataset.pos;
+
+        item.dataset.pos = getPos(itemPos, newActivePos)
+    });
+};
+
+const getPos = function (current, active) {
+    const diff = current - active;
+
+    if (Math.abs(current - active) > 2) {
+        return -current
+    }
+
+    return diff;
+}
+</script>
