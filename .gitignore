@@ -49,3 +49,13 @@ temp/
 .env
 .env.test
 .env.production
+
+# Template-specific exclusions
+# SF Pro Fonts - Users need to add their own fonts
+San-Francisco-Pro-Fonts-master/
+# Liquid Glass JS library - Users need to add their own
+liquid-glass-js-main/
+# Sample images - Users need to add their own
+Images/
+# Sample welcome image
+welcome.webp
