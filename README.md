@@ -6,6 +6,8 @@ Hey guys! I created this template following aesthetic guidelines and Liquid-Glas
 
 This is a **ready-to-use portfolio template** that you can customize with your own information. Simply insert your details in the web files and you'll have a stunning, modern portfolio that follows Apple's design principles and features cutting-edge liquid glass effects.
 
+<img width="1921" height="949" alt="Screenshot 2025-09-02 142324" src="https://github.com/user-attachments/assets/6496c785-e6e5-439d-b1ac-563ee8c77fb4" />
+
 ## ⚠️ Important Notes
 
 - **LIQUID GLASS NAVIGATION BUTTONS** are WebGL dependent and tend to have issues loading images inside of glass panels
